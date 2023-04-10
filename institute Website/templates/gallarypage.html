@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% load static %}
+<html lang="en">
+<head>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    {% block content%}
+    <div class="img-gallary">
+      <img src="{% static '10.jpg'%}"style="width:30%;cursor: pointer;margin:20px; transform: scale(0.8) rotate();
+      border-radius: 20px;  box-shadow: 0 32px 75px rgba(68,77,136,0.2);" >
+      <img src="{% static '12.jpg'%}"style="width:30%; cursor: pointer;margin:20px;transform: scale(0.8) rotate();
+      border-radius: 20px;  box-shadow: 0 32px 75px rgba(68,77,136,0.2);">
+      <img src="{% static '13.jpg'%}"style="width:30%; cursor: pointer;margin:20px;transform: scale(0.8) rotate();
+      border-radius: 20px;  box-shadow: 0 32px 75px rgba(68,77,136,0.2);">
+      <img src="{% static '14.jpg'%}"style="width:30%; cursor: pointer;margin:20px;transform: scale(0.8) rotate();
+      border-radius: 20px;  box-shadow: 0 32px 75px rgba(68,77,136,0.2);">
+      <img src="{% static '5.PNG'%}"style="width:30%; cursor: pointer;margin:20px;transform: scale(0.8) rotate();
+      border-radius: 20px;  box-shadow: 0 32px 75px rgba(68,77,136,0.2);">
+      <img src="{% static '16.jpg'%}"style="width:30%; cursor: pointer;margin:20px;transform: scale(0.8) rotate();
+      border-radius: 20px;  box-shadow: 0 32px 75px rgba(68,77,136,0.2);">
+      <img src="{% static '17.jpg'%}"style="width:30%; cursor: pointer;margin:20px;transform: scale(0.8) rotate();
+      border-radius: 20px;  box-shadow: 0 32px 75px rgba(68,77,136,0.2);">
+      <img src="{% static '18.png'%}"style="width:30%; cursor: pointer;margin:20px;transform: scale(0.8) rotate();
+      border-radius: 20px;  box-shadow: 0 32px 75px rgba(68,77,136,0.2);">
+      <img src="{% static '19.jpg'%}"style="width:30%; cursor: pointer;margin:20px;transform: scale(0.8) rotate();
+      border-radius: 20px;  box-shadow: 0 32px 75px rgba(68,77,136,0.2);">
+    </div>
+    {% endblock%}
+</body>
+</html>

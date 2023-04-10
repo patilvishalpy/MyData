@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+<html lang="en">
+<head>
+</head>
+<style>
+
+</style>
+<body>
+    {% block content%}
+    <h1 style="text-align:center;">Comment Form</h1>
+    <div class="container bordered">
+      <div class="row">
+        <div class="offset-md-4 col-md-4">
+          <form method="POST" class="bg-primary px-5 py-2 text-white">
+            {% csrf_token%}
+            <label>Name</label>
+            <input type="text" class="form-control" name="Name" id="id1"> 
+            <label>Ratings</label>
+            <input type="number" class="form-control" name="Rating" id="id1">
+            <label>Enter Your Comments</label>
+            <textarea type="text" id="Comment" cols="30" rows="10" name="Comment"></textarea>
+            <center>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Cancel">
+            </center>
+          </form>
+             <div style="height:100px;width:350px; margin-top:20px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto; background-color:black;" class="text-light">
+              {% if feedbk %}
+              {% for i in feedbk %}
+              <div style="padding-left: 10px;">{{i.name}} <br>{{i.ratings}} <br>{{i.comments}} <br> <br></div>
+              {% endfor%}
+              {% endif%}
+              </div>
+           </div> 
+          </div>
+      </div>
+     </div>
+    </div>
+    {% endblock%}
+</body>
+</html>

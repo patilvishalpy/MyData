@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+<html lang="en">
+<head>
+</head>
+<style>
+
+</style>
+
+<body>
+    <h1>vishal</h1>
+    {% block content%}
+    <table class="table table-bordered text-center">
+        <thead class="bg-primary text-white">
+            <tr>
+                <th>course Number</th>
+                <th>Course Name</th>
+                <th>Timing</th>
+                <th>Starting Data</th>
+                <th>Duration</th>
+                <th>Fees</th>
+                <th>Trainer Name</th>
+            </tr>
+        
+        </thead>
+        <tbody class="text-light bg-dark">
+            {% for i in course %}
+            <tr>
+                <td>{{i.course_no}}</td>
+                <td>{{i.course_name}}</td>
+                <td>{{i.timing}}</td>
+                <td>{{i.starting_date}}</td>
+                <td>{{i.duration}}</td>
+                <td>{{i.fees}}</td>
+                <td>{{i.trainer_name}}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% endblock%}
+</body>
+</html>
